@@ -1,1 +1,1 @@
- // printf("Media: %.1f\n",average);
+float

@@ -20,8 +20,8 @@ int main(){
         average2 = (average+e)/2;
 
         if (average2>=5){
-            printf("Alunu aprovado.\n");
-            printf("Media fianl: %.1f\n",average2);
+            printf("Aluno aprovado.\n");
+            printf("Media final: %.1f\n",average2);
         }else{
             printf("Aluno reprovado.\n");
             printf("Media final: %.1f\n",average2);
