@@ -3,8 +3,8 @@ int main(){
     float a,score,avg;
     int x,count=0;
 
-    while(x!=2){
-        while(count <2)
+   loop: while(1){
+        while(1)
         {
             scanf("%f",&a);
             if (a>=0 && a<=10){
@@ -12,24 +12,31 @@ int main(){
                 count++;
             }
             else{printf("nota invalida\n");} 
+            if (count ==2)
+                break;
         }
         avg = score/2;
 
         printf("media = %.2f\n",avg);
+
+        count=0;
+        score=0;
         
-        while(x!=1 || x!=2){
+
+        while(1){
             printf("novo calculo (1-sim 2-nao)\n");
             scanf("%d",&x);
         
-            // if (x == 2){
-            //     break;
-            //     break;}
-            // else{
-                count=0;
-                score=0;
+            if (x==2 || x==1)
+                break;
             }
-            
+        if (x==2)break;
+        else if (x==1){
+            goto loop;
+        }
             
     }
+    return 0;
     
 }
+
