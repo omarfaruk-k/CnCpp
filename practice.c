@@ -1,11 +1,10 @@
 #include<stdio.h>
 int main()
 {
-    int i[10] = { 2, 3, 4, 5, 6, 7, 8, 9, 55};
-    for(int j=0;j<9;j++){
-    printf("%d",i[j]);
-    printf(" ");
-    }
+    int i0,i1,i2,i3;
+    scanf("%d %d %d %d",&i0,&i1,&i2,&i3);
+    printf("%d",i2);
+    
     
     return 0;
 
