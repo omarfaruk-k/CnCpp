@@ -6,15 +6,15 @@ int main(){
     for(row=1;row<=size;row++){
         for(int space=1;space<=size-row;space++){
             printf(" ");}
-        for(col=1;col<=2*row-1;col++){
-            printf("*");
+        for(col=1;col<=row;col++){
+            printf("* ");
         }printf("\n");
     }
     for(row=size;row>=1;row--){
         for(int space=1;space<=size-row;space++){
             printf(" ");}
-        for(col=1;col<=2*row-1;col++){
-            printf("*");
+        for(col=1;col<=row;col++){
+            printf("* ");
         }printf("\n");
     }
     return 0;

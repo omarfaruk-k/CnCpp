@@ -9,6 +9,9 @@ int main(){
     while(i<=last_num){
         for(j=1;j<=element_no;j++){
             printf("%d",i);
+            if (j<element_no){
+                printf(" ");
+            }
             i++;
         }printf("\n");
         
