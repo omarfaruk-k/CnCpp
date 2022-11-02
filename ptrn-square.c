@@ -6,7 +6,8 @@ int main(){
     for (row=1;row<=size;row++){
         for(col=1;col<=size;col++){
             if(row==size || row==1 || col==size || col ==1){
-                printf("*");
+                printf("#");
+                
             }else{
                 printf(" ");}
         }printf("\n");
