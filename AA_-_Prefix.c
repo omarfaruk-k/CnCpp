@@ -12,12 +12,13 @@ int main(){
         }else{
             printf("No");
         }}
-    else if(strlen(s)==0 && strlen(t)!=0){
+    else if(strlen(s)!=0 && strlen(t)==0){
         printf("Yes");
-    }else if((strlen(s)!=0 && strlen(t)==0) ||(strlen(s)==0 && strlen(t)==0) ){
+    }else if((strlen(s)==0 && strlen(t)!=0)){
         printf("No");
     }
     else{
+
         for(int i=0;i<strlen(s);i++){
             if(t[i]==s[i]){
                 printf("Yes");
