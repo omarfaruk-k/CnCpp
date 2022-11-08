@@ -1,9 +1,8 @@
 #include<stdio.h>
+#include<string.h>
 int main(){
-    int dist=12,count,temp;
-
-
-        count=dist/5;
-       
-         printf("%d",count);    
-    }
+    char n[100];
+    scanf("%s",n);
+    
+    printf("%s",strcat(n,'2'));
+}

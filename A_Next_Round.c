@@ -7,15 +7,13 @@ int main(){
         scanf("%d",&arr[i]);
     }
     for(int j=0;j<n;j++){
-        if (arr[j]>arr[k+1] && arr[j]!=0)
+        if (arr[j]>=arr[k] && arr[j]!=0)
             {
                 count++;
             }
         else if(arr[j]==0){
             continue;
         }
-
-        printf("%d",count);
-         }
+    }printf("%d",count);
     
 }
