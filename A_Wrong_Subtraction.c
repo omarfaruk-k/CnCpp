@@ -7,7 +7,6 @@ int main(){
             n=n-1;
         }else{
             n=n/10;
-            //n=n-1;
         }
     }printf("%d",n);
 
