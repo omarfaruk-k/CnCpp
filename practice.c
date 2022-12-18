@@ -1,8 +1,10 @@
 #include<stdio.h>
-#include<string.h>
+#include<math.h>
 int main(){
-    char n[100];
-    scanf("%s",n);
-    
-    printf("%d",strlen(n));
+    int n;
+    int x=5;
+    int p;
+    scanf("%d",&n);
+    p=pow(x,n);
+    printf("%d",p);
 }
