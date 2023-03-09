@@ -1,23 +1,44 @@
-#include<bits/stdc++.h>
-using namespace std;
+#include<iostream> 
+#include<math.h>
+using namespace std;  //using declaration
+int main()  //main function
 
-int main(){
-    int n=3,m=n*2;
-    int arr[n]={1,2,3};
-    int arr2[n]={1,2,3};
-    int arr3[m];
-    for(int i=m;i<n;i++){
-        arr3[i]=arr2[i];
+{  
+   int size,Q,item,B,E; 
+   cin>>size>>Q;   
+   int arr[size];  
+
+   //loop for taking array elements input
+
+   for(int i = 0; i < size ;i++)  
+   {
+    cin>>arr[i]; 
+   }
+   while(Q--)
+   {
+    cin>>item;  
+   
+   int MID = floor((B+E)/2); 
+
+   B=0, E=size-1; 
+
+   while(B<=E && arr[MID]!=item) 
+   { 
+    if(arr[MID]>item){ 
+
+        E = MID-1;
+    }else{
+        B = MID+1; 
     }
-    // for(int i=0;i<n;i++){
-    // arr3[i]=arr2[i];
-    // }
 
+    MID = floor((B+E)/2); 
+   }
 
-    for(int i =0;i<n;i++){
-        cout<<arr3[i]<<endl;
-    }
-
-
+   if(B>E){  
+    cout<<"-1"<<endl;  
+   }else{  
+    cout<<MID<<endl; 
+   }
+   }
     return 0;
 }

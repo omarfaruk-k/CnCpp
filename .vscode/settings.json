@@ -75,7 +75,8 @@
     "new": "cpp",
     "stdexcept": "cpp",
     "streambuf": "cpp",
-    "typeinfo": "cpp"
+    "typeinfo": "cpp",
+    "span": "cpp"
   },
   "C_Cpp_Runner.useAddressSanitizer": false
 }
