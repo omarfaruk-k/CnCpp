@@ -1,5 +1,4 @@
-#include<iostream>  //Preprocessor derivative headerfile
-#include<math.h>    //Preprocessor derivative headerfile for floor
+#include<bits/stdc++.h>  //Preprocessor derivative headerfile
 using namespace std; //Using declaration
 
 int main(){             //decleration of main function
@@ -13,14 +12,7 @@ int main(){             //decleration of main function
     }
     
     
-    for(int i=1;i<n;i++){    //first loop for sorting, this will do loop for pass 
-
-        for(int j=0;j<n-i;j++){          //secound loop for sorting, will run till the n-i elemnts off arrray
-            if(ara[j]>ara[j+1]){         //Chechikg if right side elemnt is bigger then the element we itterratring 
-                swap(ara[j],ara[j+1]);   //swaping if the element of right side is bigger
-            }
-        }
-    }
+    sort(ara,ara+n);
 
     while (t--)                             // loop for the total check
     {

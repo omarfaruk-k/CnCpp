@@ -1,44 +1,52 @@
-#include<iostream> 
-#include<math.h>
-using namespace std;  //using declaration
-int main()  //main function
+#include<iostream> //preprocessor derivative header file
+#include<math.h>   //cmath header file for mathematical functions
+using namespace std; //using declaration
+int main(){   //main function
+    int n,i;  //declaring int type variable
+    cin>>n;   //taking input
+    int arr[n]; //declaring array 
 
-{  
-   int size,Q,item,B,E; 
-   cin>>size>>Q;   
-   int arr[size];  
+    //loop for taking array inputs
 
-   //loop for taking array elements input
+    for(int i =0 ;i <n ; i++){
+        cin>>arr[i]; //taking input of array element
+    }
+    int element; //declaring int type varaiable element
+    cin>>element; //taking input
+    int arr2[element]; //declaring 2nd array
 
-   for(int i = 0; i < size ;i++)  
-   {
-    cin>>arr[i]; 
-   }
-   while(Q--)
-   {
-    cin>>item;  
-   
-   int MID = floor((B+E)/2); 
+    //loop for taking array inputs
 
-   B=0, E=size-1; 
-
-   while(B<=E && arr[MID]!=item) 
-   { 
-    if(arr[MID]>item){ 
-
-        E = MID-1;
-    }else{
-        B = MID+1; 
+    for(int i =0 ;i <element ; i++){
+        cin>>arr2[i]; //taking input
     }
 
-    MID = floor((B+E)/2); 
-   }
 
-   if(B>E){  
-    cout<<"-1"<<endl;  
-   }else{  
-    cout<<MID<<endl; 
+    int c=0;    //initialilate count variable c 
+   for(int i =0 ;i<element;i++)  /*while beg value is less than end and arr of mid is not equal to  array item which we are searching*/
+   { 
+
+    int B=0,E=n-1;    /*initialate beggining and end = size -1 because array index starts from 0*/
+   
+    int MID = floor((B+E)/2); 
+   while(B<=E && arr[MID]!=arr2[i]) 
+       
+   { 
+    if(arr[MID]>arr2[i]){  //check if arr[mid] is greater than  array item  
+
+
+        E = MID-1; //if yes than End = Mid-1
+    }else{
+        B = MID+1;  //if no Beggining = Mid+1
+    }
+    MID = floor((B+E)/2); /*initialating int type mid value in the floor value of the summation of beg and end by 2*/
+   }
+   if(arr[MID]==arr2[i]){ //if array 1 mid is equal to arra2 item
+         c++; //increment of count
    }
    }
-    return 0;
+       //if no
+    cout<<c<<endl;  //print count number
+
+ return 0; //return 0 value to the main function
 }
