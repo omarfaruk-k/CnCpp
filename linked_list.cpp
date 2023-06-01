@@ -40,19 +40,20 @@ void insert_at_ending(node *newnode){
 }
 
 
-void insertion_of_newnode(node *newnode){   
 
-    node *ptr=start;    //for traversing, storing the address in ptr
-    node *temp;         //temp node to store the 2nd last node we checked. it keeps the node which is nearest smaller of our newnode.
-    while(ptr->data<newnode->data){     //running the loop till the data of newnode smaller then the node we checking
-        temp=ptr;       //storing the node which is checked
-        ptr=ptr->next;  //changing the ptr node to its next node
+// void insertion_of_newnode(node *newnode){   
 
-    }
-    newnode->next=temp->next;   //newnode will be placed after the temp node as tepm node is the previous node of ptr, which is bigger then newnode
-    temp->next=newnode;
+//     node *ptr=start;    //for traversing, storing the address in ptr
+//     node *temp;         //temp node to store the 2nd last node we checked. it keeps the node which is nearest smaller of our newnode.
+//     while(ptr->data<newnode->data && ){     //running the loop till the data of newnode smaller then the node we checking
+//         temp=ptr;       //storing the node which is checked
+//         ptr=ptr->next;  //changing the ptr node to its next node
 
-}
+//     }
+//     newnode->next=temp->next;   //newnode will be placed after the temp node as tepm node is the previous node of ptr, which is bigger then newnode
+//     temp->next=newnode;
+
+// }
 
 void travers(){
     node *ptr=start;
@@ -65,27 +66,82 @@ void travers(){
     
 }
 
+void dlt(int tgt){
+    // if(tgt==0){
+    //     start=start->next;
+    // }
+    // else
+    // {
+       int count=0;
+       node *ptr=start;
+       node *save=ptr;
+       while (count!=tgt)
+       {
+            save=ptr;
+            ptr=ptr->next;
+            count++;
+       }
+
+       save->next=ptr->next;
+
+    //}
+    
+}
+
+void *rvrs(){
+    node *ptr=start;
+    node *prev=NULL;
+    node *forw;
+    while (ptr!=NULL)
+    {
+        forw=ptr->next;
+        ptr->next=prev;
+        prev=ptr;
+        ptr=forw;
+    }
+    
+    start=prev;
+}
+
 
 int main(){
-    
-    for(int i=10;i<=100;i+=10)      //loop for creating sortes linked list
+    int n, item;
+    cin>>n;
+    for(int i=0;i<n;i++)      //loop for creating sortes linked list
     {
-        node *newnode =create_node(i);  //creating newnode with i value
+        cin>>item;
+        node *newnode =create_node(item);  //creating newnode with i value
         insert_at_ending(newnode);      //isnerting newnode in the ending
         
     }
-    cout<<"The sorted linked list: ";
+
     travers();
 
-    int item;
-    cout<<"Enter the value:  ";
-    cin>>item;      //the item which we want to input in our list
+    // int tgt;
+    // cout<<"Enter the value:  ";
+    // cin>>tgt;      //the item which we want to input in our list
 
-    node *newnode= create_node(item);       //creating a node of item
-    insertion_of_newnode(newnode);      //inserting it in its suitable position
+    // dlt(tgt);
 
-    cout<<"Linked list after insertion: "; 
+    rvrs();
     travers();
 
     return 0;
 }
+
+
+
+
+
+
+
+
+
+
+void print() { temp = head; //take temp in head 
+while(temp != NULL) // while temp not go to NULL; 
+{ cout<<temp->data; // print data 
+temp = temp ->prev; // bring temp in previous pointer 
+if(temp != NULL) // if temp not go to in null 
+{ cout<<" "; // print space 
+} } }
