@@ -1,58 +1,62 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-struct stk
-{
-    int data;
-    stk *next;
-};
+#define n 100
 
-stk *front = NULL;
-stk *rear = NULL;
+char stk[n];
 
-void push(int data){
-    stk *newnode = new stk;
-    newnode->data=data;
-    newnode->next=NULL;
-    if(front==NULL && rear==NULL){
-        front=rear=newnode;
+int top=-1;
+
+void pop(){
+    if(top==-1){
+        cout<<"Underflow "<<endl;
+        exit(1);
     }
-    
-        rear->next=newnode;
-        rear=newnode;
-
-
+    top--;
 }
 
-// void pop(){
-//     =top->next;
-// }
-
-void traverse(){
-    stk *ptr=front;
-    while(ptr!=NULL){
-        cout<<ptr->data<<" ";
-        ptr=ptr->next;
-
+void push(char item){
+    if(top==n-1){
+        cout<<"OVerflow"<<endl;
+        exit(1);
     }
+    top++;
 
-    cout<<endl;
+    stk[top]=item;
+    
 }
 
 int main(){
-    int n, data;
-    cin>>n;
-    for(int i=0;i<n;i++){
-        cin>>data;
-        push(data);
+    string infix,post;
+    getline(cin,infix);
+    infix="("+infix+")";
+
+    for(int i=0;i<infix.size();i++){
+
+        if(infix[i]>='A' && infix[i]<='Z'){
+            post.push_back(infix[i]);
+        }
+        else if(infix[i]=='+' || infix[i]=='-' || infix[i]=='*' || infix[i]=='/' || infix[i]=='^'){
+            if((infix[i]=='+' || infix[i]=='-') && top=='*' || top=='/' || top=='^'){
+                post.push_back(top);
+                pop();
+                push(infix[i]);
+            }
+            else if((infix[i]=='*' || infix[i]=='/') && top=='^'){
+                post.push_back(top);
+                pop();
+                push(infix[i]);
+            }
+            else{
+                
+            }
+        }
+
+
+
+
     }
-
-    traverse();
-
-    // pop();
-    // pop();
-    // pop();
-    traverse();
+    
 
     return 0;
 }
