@@ -1,1 +1,1 @@
-{"name":"Local: practice","url":"/home/ofk/CODE/CnCpp/practice.cpp","tests":[],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/ofk/CODE/CnCpp/practice.cpp","group":"local","local":true}
+{"name":"Local: practice","url":"/home/ofk/CODE/CnCpp/practice.cpp","tests":[{"id":1692724969933,"input":"10\n8 5 9 2 6 3 7 1 10 4","output":"1 2 3 4 5 6 7 8 9 10\n34"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/ofk/CODE/CnCpp/practice.cpp","group":"local","local":true}
