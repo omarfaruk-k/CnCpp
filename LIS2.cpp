@@ -1,3 +1,6 @@
+//visit this for printig LIS: https://cp-algorithms.com/sequences/longest_increasing_subsequence.html#finding-the-length
+// also :  https://github.com/me-shaon/bangla-programming-resources
+
 #include<bits/stdc++.h>
 using namespace std;
 
