@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/ofk/CODE/CnCpp",
-      "program": "/home/ofk/CODE/CnCpp/build/Debug/outDebug",
+      "cwd": "/home/ofk/CODE/CnCpp/Algo",
+      "program": "/home/ofk/CODE/CnCpp/Algo/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

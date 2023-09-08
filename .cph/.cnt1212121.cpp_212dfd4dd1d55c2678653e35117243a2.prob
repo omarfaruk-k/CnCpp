@@ -1,0 +1,1 @@
+{"name":"Local: cnt1212121","url":"/home/ofk/CODE/CnCpp/cnt1212121.cpp","tests":[{"id":1693248285636,"input":"1\naaabbb","output":"3a3b"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/ofk/CODE/CnCpp/cnt1212121.cpp","group":"local","local":true}
