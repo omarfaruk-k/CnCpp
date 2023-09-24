@@ -18,7 +18,9 @@ int32_t main(){
 
     while (tc--)
     {
-        
+        string ss;cin>>ss;
+        if(ss[0]=='a' || ss[1]=='b' || ss[2]=='c') cout<<"YES"<<endl;
+        else cout<<"NO"<<endl;
     }
     
      

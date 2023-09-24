@@ -18,7 +18,23 @@ int32_t main(){
 
     while (tc--)
     {
-        
+        int n;cin>>n;
+        int arr[n];
+        int ans;
+        for (int i = 0; i < n; i++)
+        {
+            cin>>arr[i];
+        }
+
+        sort(arr,arr+n);
+
+        arr[0]++;
+        ans=arr[0];
+        for (int i = 1; i < n; i++)
+        {
+            ans*=arr[i];
+        }
+        cout<<ans<<endl;
     }
     
      
