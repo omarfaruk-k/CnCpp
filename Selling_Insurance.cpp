@@ -9,7 +9,7 @@ using namespace std;
 
 typedef vector<int>  v;
 typedef pair<int,int> pll;
-typedef vector<pll> vp;
+typedef vector<int> vp;
 
 
 
@@ -18,7 +18,10 @@ int32_t main(){
 
     while (tc--)
     {
-        
+        ld n;cin>>n;
+        n=n*0.2;
+        int ans=100/n;
+        cout<<ans+1<<endl;
     }
     
      

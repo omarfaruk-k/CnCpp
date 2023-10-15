@@ -7,9 +7,9 @@ using namespace std;
 #define pb push_back
 #define pop pop_back
 
-typedef vector<int>  v;
-typedef pair<int,int> pll;
-typedef vector<pll> vp;
+typedef vector<int>  vec;
+typedef pair<int,int> pr;
+typedef vector<pr> vecpair;
 
 
 
@@ -18,6 +18,15 @@ int32_t main(){
 
     while (tc--)
     {
+        int a,cnt=0;
+        cin>>a;
+        int i=3;
+        while (i--)
+        {
+            int b;cin>>b;
+            if(b>a) cnt++;
+        }
+        cout<<cnt<<endl;
         
     }
     

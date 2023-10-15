@@ -9,15 +9,21 @@ using namespace std;
 
 typedef vector<int>  v;
 typedef pair<int,int> pll;
-typedef vector<pll> vp;
+typedef vector<int> vp;
 
 
 
 int32_t main(){
-    int tc;cin>>tc;
 
-    while (tc--)
+    while (1)
     {
+    int tc;cin>>tc;
+    if (tc==42)
+    {
+        break;
+    }
+    cout<<tc<<endl;
+    
         
     }
     
