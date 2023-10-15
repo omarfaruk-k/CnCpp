@@ -9,17 +9,15 @@ using namespace std;
 
 typedef vector<int>  v;
 typedef pair<int,int> pll;
-typedef vector<pll> vp;
+typedef vector<int> vp;
 
 
 
 int32_t main(){
     int tc;cin>>tc;
 
-    while (tc--)
-    {
-        
-    }
+    if(8<=tc && tc<=10) cout<<"YES"<<endl;
+    else cout<<"NO"<<endl;
     
      
 

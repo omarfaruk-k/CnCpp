@@ -9,7 +9,7 @@ using namespace std;
 
 typedef vector<int>  v;
 typedef pair<int,int> pll;
-typedef vector<pll> vp;
+typedef vector<int> vp;
 
 
 
@@ -18,7 +18,17 @@ int32_t main(){
 
     while (tc--)
     {
+        int n,m,k;cin>>n>>m;
+        bool is =false;
+        for (int i = 0; i < n; i++)
+        {
+            cin>>k;
+            if(k==m) is=true;
+        }
         
+
+        if(is==true) cout<<"YES"<<endl;
+        else cout<<"NO"<<endl;
     }
     
      

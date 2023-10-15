@@ -5,9 +5,9 @@ using namespace std;
 
 ll max_n=10000000;
 bool is_prime[10000000];
-ll prime[6000000];
+ll prime[5000000];
 void sieve(){
-    for (ll i = 0; i < max_n; i++)
+    for (ll i = 0; i <=max_n; i++)
     {
         is_prime[i]=1;
     }
@@ -18,7 +18,7 @@ void sieve(){
     for (ll i = 2; i*i<=max_n; i++)
     {
         if(is_prime[i]==1){
-            for (ll j = i*i; j < max_n; j+=i)
+            for (ll j = i*i; j <= max_n; j+=i)
             {
                 is_prime[j]=0;
             }
@@ -26,10 +26,10 @@ void sieve(){
         }
     }
 
-    ll j=0;
+    ll j=1;
     prime[0]=2,prime[1]=3;
 
-    for (ll i = 3; i <=max_n; i+=2)
+    for (ll i = 3; i <=max_n;i+=2)
     {
         if(is_prime[i]==1){
             prime[j]=i;

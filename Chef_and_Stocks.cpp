@@ -9,7 +9,7 @@ using namespace std;
 
 typedef vector<int>  v;
 typedef pair<int,int> pll;
-typedef vector<pll> vp;
+typedef vector<int> vp;
 
 
 
@@ -18,6 +18,19 @@ int32_t main(){
 
     while (tc--)
     {
+        int n;cin>>n;
+        int arr[n];
+        for (int i = 0; i < n; i++)
+        {
+                cin>>arr[i];
+        }
+        sort(arr, arr+n);
+        int sum=0;
+        for (int i = 1; i < n; i++)
+        {
+            sum+=arr[i];
+        }
+        cout<<sum<<endl;
         
     }
     

@@ -18,10 +18,13 @@ int32_t main(){
 
     while (tc--)
     {
-        
+        int a,b;
+        cin>>a>>b;
+        int ans=a^b;
+        cout<<ans<<endl;
     }
     
      
 
     return 0;
-}
+}   

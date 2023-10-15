@@ -7,19 +7,21 @@ using namespace std;
 #define pb push_back
 #define pop pop_back
 
-typedef vector<int>  v;
-typedef pair<int,int> pll;
-typedef vector<pll> vp;
+typedef vector<int>  vec;
+typedef pair<int,int> pr;
+typedef vector<pr> vecpair;
 
 
 
 int32_t main(){
-    int tc;cin>>tc;
+    int t,b;cin>>t>>b;;
+    int big=max(t,b);
+    int sml=min(t,b);
 
-    while (tc--)
-    {
-        
-    }
+    int rem = (big-sml)/2;
+
+    cout<<sml<<" "<<rem<<endl;
+
     
      
 
