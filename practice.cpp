@@ -14,21 +14,21 @@ typedef vector<pr> vecpair;
 
 
 int32_t main(){
-    int a;cin>>a;
-    int ai=-1,aj=-1;
-    for (int i = 1; i <=a; i++)
-    {
-        for (int j = i; j <=a; j++)
-        {
-            int aa=i^j;
-            if(aa==a) {
-                ai=i;
-                aj=j;
-            }
-        }
+    int a,b;cin>>a>>b;
+    // int ai=-1,aj=-1;
+    // for (int i = 1; i <=a; i++)
+    // {
+    //     for (int j = i; j <=a; j++)
+    //     {
+    //         int aa=i^j;
+    //         if(aa==a) {
+    //             ai=i;
+    //             aj=j;
+    //         }
+    //     }
         
-    }
-    cout<<ai<<" "<<aj<<endl;
+    // }
+    // cout<<ai<<" "<<aj<<endl;
 
 
     // vec v;
