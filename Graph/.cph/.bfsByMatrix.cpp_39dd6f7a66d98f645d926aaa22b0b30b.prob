@@ -1,0 +1,1 @@
+{"name":"Local: bfsByMatrix","url":"/home/ofk/CODE/CnCpp/Graph/bfsByMatrix.cpp","tests":[{"id":1697440423512,"input":"5 7\n1 2\n1 4\n1 5\n2 3\n2 4\n3 4\n4 5","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/ofk/CODE/CnCpp/Graph/bfsByMatrix.cpp","group":"local","local":true}
