@@ -28,18 +28,21 @@ int32_t main(){
             v.pb(a);
         }
 
-    for (int i = 0; i < n-1; i++)
-    {
-        for (int j = i; j <= n; j++)
+        int i=0,j=1;
+
+        while (j!=n)
         {
             if(v[i]>v[j]){
                 swap(v[i],v[j]);
+
+                i=0;j=1;
                 cnt++;
             }
+            else {
+                i++;j++;
+               
+            }
         }
-        
-    }
-    
         
         cout<<cnt<<endl;
     }

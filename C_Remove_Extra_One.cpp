@@ -14,32 +14,28 @@ typedef vector<pr> vecpair;
 
 
 int32_t main(){
-    int tc;cin>>tc;
-
-    set<int> set;
-    vec v;
-    int cnt=0;
+    int n;cin>>n;
+    int a,b;
     while (tc--)
     {
-        int a;cin>>a; v.pb(a);
         int n;cin>>n;
-        while (n--)
-        {
-            int b;cin>>b;
-            set.insert(b);
+        if(n>a) {
+            a=n;
         }
-        
-    }
-    
-    for (auto i:v)
-    {
-        for(auto ii:set){
-            if(i==ii) cnt++;
+        else{
+            if(b>a) b=a; 
         }
+
     }
+
+    cout<<b<<endl;
     
-    cout<<set.size()-cnt<<endl;
      
 
     return 0;
 }
+
+
+
+
+

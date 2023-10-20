@@ -1,0 +1,1 @@
+{"name":"Local: G Taka Is Everything","url":"/home/ofk/CODE/CnCpp/G Taka Is Everything.cpp","tests":[{"id":1697818320316,"input":"20 30 70 90\n3","output":"150"},{"id":1697818328013,"input":"1 5 5 5\n1","output":"4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/ofk/CODE/CnCpp/G Taka Is Everything.cpp","group":"local","local":true}

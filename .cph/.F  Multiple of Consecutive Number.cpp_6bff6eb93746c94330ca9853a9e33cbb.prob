@@ -1,0 +1,1 @@
+{"name":"Local: F  Multiple of Consecutive Number","url":"/home/ofk/CODE/CnCpp/F  Multiple of Consecutive Number.cpp","tests":[{"id":1697818003689,"input":"3\n110\n42\n15","output":"10\n6\n-1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/ofk/CODE/CnCpp/F  Multiple of Consecutive Number.cpp","group":"local","local":true}

@@ -15,30 +15,21 @@ typedef vector<pr> vecpair;
 
 int32_t main(){
     int tc;cin>>tc;
-
-    set<int> set;
-    vec v;
-    int cnt=0;
+    map<int,int> mp;
     while (tc--)
     {
-        int a;cin>>a; v.pb(a);
-        int n;cin>>n;
-        while (n--)
-        {
-            int b;cin>>b;
-            set.insert(b);
-        }
-        
+        int a;cin>>a;
+        mp[a]++;
     }
-    
-    for (auto i:v)
-    {
-        for(auto ii:set){
-            if(i==ii) cnt++;
-        }
+
+    int ans=0;
+
+    for(auto i:mp){
+        if(i.second>ans) ans=i.second;
     }
-    
-    cout<<set.size()-cnt<<endl;
+
+    cout<<ans<<endl;
+
      
 
     return 0;

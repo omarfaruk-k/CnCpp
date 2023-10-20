@@ -1,0 +1,1 @@
+{"name":"Local: C","url":"/home/ofk/CODE/CnCpp/C. Sorting a Binary Array.cpp","tests":[{"id":1697815766547,"input":"2\n5\n0 1 0 1 0\n8\n0 0 1 0 1 0 1 1","output":"3\n3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/ofk/CODE/CnCpp/C. Sorting a Binary Array.cpp","group":"local","local":true}
