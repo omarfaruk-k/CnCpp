@@ -1,5 +1,3 @@
-
-
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -21,19 +19,19 @@ int32_t main(){
     while (tc--)
     {
         int n;cin>>n;
-        int arr[n];
-        for (int i = 0; i < n; i++)
-        {
-            cin>>arr[i];
-        }
-        int sum;
-        for (int i = 0; i < 256; i++)
-        {
-            int a;
-        }
-        
-        
+        n--;
+        int a,b;cin>>a>>b;
+        bool flg=true;
 
+        while (n--)
+        {
+            int i,j;cin>>i>>j;
+            if(i>=a && j>=b)  flg=false;
+
+        }
+        if(flg) cout<<a<<endl;
+        else cout<<-1<<endl;
+        
     }
     
      

@@ -1,5 +1,3 @@
-
-
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -17,24 +15,17 @@ typedef vector<pr> vecpair;
 
 int32_t main(){
     int tc;cin>>tc;
-
+    int sum1=0,sum2=0,sum3=0;
     while (tc--)
     {
-        int n;cin>>n;
-        int arr[n];
-        for (int i = 0; i < n; i++)
-        {
-            cin>>arr[i];
-        }
-        int sum;
-        for (int i = 0; i < 256; i++)
-        {
-            int a;
-        }
-        
-        
-
+        int a,b,c;cin>>a>>b>>c;
+        sum1+=a;
+        sum2+=b;
+        sum3+=c;
     }
+
+    if(sum1==0 && sum2==0 && sum3==0) cout<<"YES"<<endl;
+    else cout<<"NO"<<endl;
     
      
 

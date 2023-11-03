@@ -1,5 +1,3 @@
-
-
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -17,24 +15,28 @@ typedef vector<pr> vecpair;
 
 int32_t main(){
     int tc;cin>>tc;
+    string s;
+    map<string, int> mp;
 
     while (tc--)
     {
-        int n;cin>>n;
-        int arr[n];
-        for (int i = 0; i < n; i++)
-        {
-            cin>>arr[i];
-        }
-        int sum;
-        for (int i = 0; i < 256; i++)
-        {
-            int a;
-        }
-        
-        
-
+        string a;cin>>a;
+        if(mp.count(a)==0) mp.insert({a,1});
+        else mp[a]++;
     }
+    int maxx=0;
+    for(auto i:mp){
+        if(i.second>maxx){
+            s=i.first;
+            maxx=i.second;
+        }
+    }
+
+     
+    cout<<s<<endl;
+
+
+    
     
      
 

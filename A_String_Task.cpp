@@ -1,5 +1,3 @@
-
-
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -16,27 +14,18 @@ typedef vector<pr> vecpair;
 
 
 int32_t main(){
-    int tc;cin>>tc;
 
-    while (tc--)
+    string s;cin>>s;
+    vec v;
+
+    for (int i = 0; i < s.length() ; i++)
     {
-        int n;cin>>n;
-        int arr[n];
-        for (int i = 0; i < n; i++)
-        {
-            cin>>arr[i];
-        }
-        int sum;
-        for (int i = 0; i < 256; i++)
-        {
-            int a;
-        }
-        
-        
-
+        char cha = (char)tolower( s[i] );
+        if((cha !='a') && (cha!='e') && (cha!='i') && (cha!='o') && (cha!='u') && (cha!='y')) cout<<"."<<cha;
     }
     
-     
+    cout<<endl;
+
 
     return 0;
 }
