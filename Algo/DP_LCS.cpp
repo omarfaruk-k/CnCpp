@@ -2,6 +2,7 @@
 using namespace std;
 
 
+
 int main(){
 
     string s1,s2;
@@ -24,6 +25,15 @@ int main(){
     
     cout<<arr[n][m]<<endl;
     
+    vector<string> strr;
+
+    for(int i = n; i>0; i++){
+        for(int j=m; j>0 ; j++){
+            if(arr[i][j]!=arr[i-1][j] || arr[i][j] != arr[i][j-1]) {
+                strr.push_back(s1[i-1]);
+
+        }
+    }
     
      
 
