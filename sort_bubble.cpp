@@ -1,6 +1,5 @@
-#include<bits/stdc++.h>   //preprocessor derivative header file
-using namespace std;        //using decleration
-
+#include<bits/stdc++.h>   
+using namespace std;       
 
 int bubble_sort(int arr[],int n){           //function for bubble sort, where arry and its size is the parametre
     int temp,cnt=0;                         //variable temp for swaping and cnt for counting the steps

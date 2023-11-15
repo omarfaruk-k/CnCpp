@@ -1,16 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-#define int long long
-#define ld long double
-#define ull unsigned long long
-#define pb push_back
-#define ppb pop_back
-
-typedef vector<int>  vec;
-typedef pair<int,int> pr;
-typedef vector<pr> vecpair;
-
 
 int node,edge;
 int matOfGraph[1000][1000];
@@ -56,14 +46,6 @@ int32_t main(){
         matOfGraph[v][u]=1;
     }
     
-    // for (int i = 1; i <= node; i++)
-    // {
-    //     for (int j = 1; j <= node; j++)
-    //     {
-    //         cout<<matOfGraph[i][j]<<" ";
-    //     }cout<<endl;
-        
-    // }
     
      bfs(1);
 
