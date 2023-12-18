@@ -14,13 +14,20 @@ typedef vector<pr> vecpair;
 
 
 int32_t main(){
-  
 
-    int a;
-    cin>>a;
-    //double b=a/2;
+    string str1, str2;
+    cin>>str1>>str2;
+
+    int n = str1.length();
+    int m = str2.length();
+
+    int lcs[n+1][m+1];
+
+    for (int i = 0; i < ; i++)
+    {
+        /* code */
+    }
     
-    cout<<a/2<<endl;
     
      
 

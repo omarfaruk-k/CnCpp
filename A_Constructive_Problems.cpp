@@ -14,13 +14,16 @@ typedef vector<pr> vecpair;
 
 
 int32_t main(){
-  
+    int tc;cin>>tc;
 
-    int a;
-    cin>>a;
-    //double b=a/2;
-    
-    cout<<a/2<<endl;
+    while (tc--)
+    {
+        int u,v;
+        cin>>u>>v;
+
+        cout<<max(u,v)<<endl;
+
+    }
     
      
 

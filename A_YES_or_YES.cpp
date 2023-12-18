@@ -14,13 +14,18 @@ typedef vector<pr> vecpair;
 
 
 int32_t main(){
-  
+    int tc;cin>>tc;
 
-    int a;
-    cin>>a;
-    //double b=a/2;
-    
-    cout<<a/2<<endl;
+    while (tc--)
+    {
+        string str;
+        cin>>str;
+
+        transform(str.begin(),str.end(),str.begin(), ::tolower);
+        
+        if(str=="yes") cout<<"Yes"<<endl;
+        else cout<<"No"<<endl;
+    }
     
      
 

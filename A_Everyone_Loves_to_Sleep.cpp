@@ -14,13 +14,14 @@ typedef vector<pr> vecpair;
 
 
 int32_t main(){
-  
+    int tc;cin>>tc;
 
-    int a;
-    cin>>a;
-    //double b=a/2;
-    
-    cout<<a/2<<endl;
+    while (tc--)
+    {
+        int n, gh,gm;
+        cin>>n>>gh>>gm;
+        ld ghum = gh+(gm/60)
+    }
     
      
 

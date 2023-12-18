@@ -14,14 +14,24 @@ typedef vector<pr> vecpair;
 
 
 int32_t main(){
-  
+    int tc;cin>>tc;
 
-    int a;
-    cin>>a;
-    //double b=a/2;
+    int arr[tc];
+    int maxx= INT_MIN;
+    int sum=0;
+
+    for (int i = 0; i < tc; i++)
+    {
+        cin>>arr[i];
+        if(arr[i]>maxx) maxx=arr[i];
+    }
+
+    for (int i = 0; i < tc; i++)
+    {
+        sum+=(maxx-arr[i]);
+    }
     
-    cout<<a/2<<endl;
-    
+    cout<<sum<<endl;
      
 
     return 0;

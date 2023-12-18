@@ -1,0 +1,1 @@
+{"name":"Local: edit","url":"/home/ofk/CODE/CnCpp/Algo/edit.cpp","tests":[{"id":1700202210347,"input":"abcd\nacbd","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/ofk/CODE/CnCpp/Algo/edit.cpp","group":"local","local":true}

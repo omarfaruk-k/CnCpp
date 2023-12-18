@@ -14,6 +14,8 @@ int main(){
     }
 
     int coins[number_of_coin+1][money+1];
+
+    
     for (int i = 0; i <= number_of_coin; i++)
     {
         for (int j = 0; j <= money; j++)

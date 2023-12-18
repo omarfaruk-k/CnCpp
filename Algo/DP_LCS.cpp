@@ -31,6 +31,7 @@ int main(){
         for(int j=m; j>0 ; j++){
             if(arr[i][j]!=arr[i-1][j] || arr[i][j] != arr[i][j-1]) {
                 strr.push_back(s1[i-1]);
+            }
 
         }
     }

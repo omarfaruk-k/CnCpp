@@ -1,5 +1,5 @@
-#include<bits/stdc++.h>   //preprocessor derivative header file
-using namespace std;        //using decleration
+#include<bits/stdc++.h>   
+using namespace std;        
 
 
 struct Card {

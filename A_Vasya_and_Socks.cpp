@@ -15,8 +15,16 @@ typedef vector<pr> vecpair;
 
 int32_t main(){
     int a,b;cin>>a>>b;
-    cout<<a+(a/b)<<endl;
+    int uttor=a;
+
     
+    while ((a/b) != 0)
+    {
+        uttor += (a/b);
+        a = a/b;
+    }
+    
+    cout<<uttor<<endl;    
      
 
     return 0;
