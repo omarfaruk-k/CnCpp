@@ -11,32 +11,32 @@ typedef vector<int>  v;
 typedef pair<int,int> pll;
 typedef vector<int> vp;
 
-
-
 int32_t main(){
-    int tc;cin>>tc;
+    int tc;
+    cin >> tc;
 
-    while (tc--)
-    {
-        int nn,kk,xx;
-        int sum=0;
-        cin>>nn>>kk>>xx;
-        if(nn<kk || kk==xx) cout<<"NO"<<endl;
-        else if((nn/kk)>1) cout<<"NO"<<endl;
-        else{
-            while (kk--)
-            {
-                sum+=nn;
-                nn--;
-            }
-            if(sum>=xx) cout<<"YES"<<endl;
-            else cout<<"NO"<<endl;
+    while (tc--) {
+        int khushite,thelay,ghurte;
+        int jugfol1, jugfol_Ashol = 0;
+        cin>>khushite>>thelay>>ghurte;
+        bool ans = 1;
+
+        jugfol_Ashol = (khushite*(khushite+1))/2;
+
+        khushite -= thelay;
+
+        jugfol1 = (khushite*(khushite+1))/2;
+
+        jugfol_Ashol -= jugfol1;
+
+        jugfol1 = (thelay*(thelay+1))/2;
+
+        if (ghurte >= jugfol1 && ghurte <= jugfol_Ashol) {
+            cout<<"YES"<<endl;
         }
-  
 
+        else  cout<<"NO"<<endl;
     }
-    
-     
 
     return 0;
 }
