@@ -14,17 +14,18 @@ typedef vector<pr> vecpair;
 
 
 int32_t main(){
+    int tc;cin>>tc;
+
+    while (tc--)
+    {
+        int a,b;
+        cin>>a>>b;
+        int sm=a+b;
+
+        sm%2!=0?cout<<"Alice"<<endl:cout<<"Bob"<<endl;
+    }
     
-    string s= "0111";
-
-    int a = is_sorted(s.begin(),s.end());
-
-    //s[1]='0';
-
-    cout<<a<<endl;
-
-    
-    
+     
 
     return 0;
 }
