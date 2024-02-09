@@ -18,27 +18,18 @@ int32_t main(){
 
     while (tc--)
     {
-        int n, gh,gm;
-        cin>>n>>gh>>gm;
-        ld ghum = gh*60+gm;
-
-        vec v;
-
+        int n;cin>>n;
+        set<int> st;
         for (int i = 0; i < n; i++)
         {
-            int h,m;
-            cin>>h>>m;
-            int time = (h*60+m)-ghum;
-
-            if(time<0) v.push_back(time+1440);
-            else v.push_back(time);
-
+            int a;cin>>a;
+            st.insert(a);
         }
 
-        sort(v.begin(),v.end());
-        int tt= v[0];
+        int s = st.size();
 
-        cout<<tt/60<<" "<<tt%60<<endl;
+        if(s%2==n%2) cout<<s<<endl;
+        else cout<<s-1<<endl;
         
     }
     
