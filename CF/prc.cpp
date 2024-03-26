@@ -1,52 +1,31 @@
-#include <iostream>
-#include <thread>
-#include <vector>
-#include <chrono>
+#include <bits/stdc++.h>
+#define ll long long int
+#define debug(...) fprintf(stderr, __VA_ARGS__), fflush(stderr)
+#define time__(d) \
+    for ( \
+        auto blockTime = make_pair(chrono::high_resolution_clock::now(), true); \
+        blockTime.second; \
+        debug("%s: %d ms\n", d, (int)chrono::duration_cast<chrono::milliseconds>(chrono::high_resolution_clock::now() - blockTime.first).count()), blockTime.second = false \
+    )
+using namespace std;
 
-constexpr int NUM_CPU = std::thread::hardware_concurrency();
-constexpr int NUM_NUMBERS = 1000000000;
-
-struct ThreadData {
-    int start;
-    int end;
-    int count;
-};
-
-void countNumbers(ThreadData* data) {
-    data->count = 0;
-    for (int i = data->start; i <= data->end; i++) {
-        data->count++;
+ll sum_till_a(int a){
+    ll res=0;
+    while(a){
+        res+=a;
+        a--;
     }
+    return res;
 }
 
-int main() {
-    int numCPU = NUM_CPU;
-    int perChunk = NUM_NUMBERS / numCPU;
-    int remainder = NUM_NUMBERS % numCPU;
-
-    std::vector<ThreadData> threadData(numCPU);
-
-    std::vector<std::thread> threads;
-
-    auto startTime = std::chrono::steady_clock::now();
-
-    for (int i = 0; i < numCPU; i++) {
-        threadData[i].start = i * perChunk + 1;
-        threadData[i].end = (i == numCPU - 1) ? threadData[i].start + perChunk + remainder - 1 : threadData[i].start + perChunk - 1;
-        threads.emplace_back(countNumbers, &threadData[i]);
+int main(){
+    ll a , res=0;
+    cin>>a;
+    
+    time__("Solve Time"){
+        res = sum_till_a(a);
     }
 
-    int totalCount = 0;
-    for (int i = 0; i < numCPU; i++) {
-        threads[i].join();
-        totalCount += threadData[i].count;
-    }
-
-    auto endTime = std::chrono::steady_clock::now();
-    auto executionTime = std::chrono::duration_cast<std::chrono::microseconds>(endTime - startTime).count();
-
-    std::cout << "Count: " << totalCount << std::endl;
-    std::cout << "Execution Time: " << executionTime << " microseconds" << std::endl;
-
+    cout<<res;
     return 0;
 }

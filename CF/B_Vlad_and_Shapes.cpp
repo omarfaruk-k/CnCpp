@@ -19,58 +19,30 @@ int32_t main(){
     while (tc--)
     {
         int n;cin>>n;
-        int arr[n+1][n+1];
+        int arr[n+1];
         int cnt=0;
+        bool tri = false;
 
 
         for (int i = 0; i < n; i++)
         {
+            cnt = 0;
             string s;cin>>s;
-            
-            for (int j = 0; j <n ; j++)
-            {
-                arr[i][j]==s[j];
-            }
-            
 
+            int a = count(s.begin(),s.end(),'1');
+            if(a==1){
+                tri = true;
+                
+            }
         }
         
-
-        // for (int i = 0; i < n; i++)
-        // {
-        //     for (int j = 0; j < n; j++)
-        //     {
-        //         cin>>arr[i][j];
-        //     }
-            
-        // }
-
-
-        int sqr = 0;
-
-        for (int i = 0; i < n-1; i++)
-        {
-            for (int j = 0; j < n-1; j++)
-            {
-                if(arr[i][j]==1){
-                    if((arr[i+1][j]==1) && (arr[i][j+1]==1)){
-                        sqr = 1;
-                        break;
-                    }
-                }
-            }
-
-            if(sqr>0) break;
-            
-        }
         
 
-        int a = sqrt(cnt);
 
-        if(sqr==1){
-            cout<<"SQUARE"<<endl;
+        if(tri){
+            cout<<"TRIANGLE"<<endl;
         }
-        else cout<<"TRIANGLE"<<endl;
+        else cout<<"SQUARE"<<endl;
 
 
 
