@@ -1,31 +1,31 @@
-#include <bits/stdc++.h>
-#define ll long long int
-#define debug(...) fprintf(stderr, __VA_ARGS__), fflush(stderr)
-#define time__(d) \
-    for ( \
-        auto blockTime = make_pair(chrono::high_resolution_clock::now(), true); \
-        blockTime.second; \
-        debug("%s: %d ms\n", d, (int)chrono::duration_cast<chrono::milliseconds>(chrono::high_resolution_clock::now() - blockTime.first).count()), blockTime.second = false \
-    )
+#include<bits/stdc++.h>
 using namespace std;
 
-ll sum_till_a(int a){
-    ll res=0;
-    while(a){
-        res+=a;
-        a--;
-    }
-    return res;
-}
+#define int long long
+#define ld long double
+#define ull unsigned long long
+#define pb push_back
+#define pop pop_back
 
-int main(){
-    ll a , res=0;
-    cin>>a;
+typedef vector<int>  vec;
+typedef pair<int,int> pr;
+typedef vector<pr> vecpair;
+
+
+
+int32_t main(){
+
+    vec v;
+    int a;
+    int sum = 0;
+    while (cin>>a)
+    {
+        sum+=a;
+    }
     
-    time__("Solve Time"){
-        res = sum_till_a(a);
-    }
+    cout<<sum<<endl;
+    
+     
 
-    cout<<res;
     return 0;
 }
