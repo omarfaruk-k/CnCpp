@@ -2,30 +2,27 @@
 using namespace std;
 
 int main(){
-    int t;cin>>t;
-    vector<int> vv;
-    for (int i = 0; i < t; i++)
+    int n;cin>>n;
+    vector<int> v;
+    for (int i = 0; i < n; i++)
     {
         int a;cin>>a;
-        vv.push_back(a);
+        v.push_back(a);
     }
     
 
 
-    for (int i = 0; i < t; i++)
+    cout<<abs(v[1]-v[0])<<" "<<abs(v[n-1]-v[0])<<endl;
+
+    for (int i = 1; i < n-1; i++)
     {
-        int min=INT_MAX;
-        int max=INT_MIN;
-        for (int j = 0; j < t; j++)
-        {
-            if(i==j) continue;
-            else {
-                if(abs(vv[i]-vv[j])>max) max=abs(vv[i]-vv[j]);
-                if(abs(vv[i]-vv[j])<min) min=abs(vv[i]-vv[j]);
-            }
-        }
-        cout<<min<<" "<<max<<endl;
+        int mn = min(abs(v[i]-v[i-1]),abs(v[i]-v[i+1]));
+        int mx = max(abs(v[n-1]-v[i]),abs(v[0]-v[i]));
+
+        cout<<mn<<" "<<mx<<endl;
     }
+    
+    cout<<abs(v[n-1]-v[n-2])<<" "<<abs(v[n-1]-v[0])<<endl;
     
     
     
